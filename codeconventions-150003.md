@@ -18,7 +18,7 @@ For questions concerning adaptation, modification, or redistribution of this doc
 
 Comments on this document should be submitted to our feedback form at http://java.sun.com/ docs/forms/sendusmail.html.
 
-**2 - File Names![](Aspose.Words.71cf046f-d6d7-46b2-a378-86110ff3a781.003.png)**
+# 2 - File Names
 
 This section lists commonly used file suffixes and names.
 
