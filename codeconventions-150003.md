@@ -1,7 +1,7 @@
 
 # 1 - Introduction
 
-1. **Why Have Code Conventions**
+**1.1 Why Have Code Conventions**
 
 Code conventions are important to programmers for a number of reasons:
 
