@@ -9,6 +9,7 @@ Code conventions are important to programmers for a number of reasons:
 - Hardly any software is maintained for its whole life by the original author.
 - Code conventions improve the readability of the software, allowing engineers to understand new code more quickly and thoroughly.
 - If you ship your source code as a product, you need to make sure it is as well packaged and clean as any other product you create.
+
 **1.2  Acknowledgments**
 
 This document reflects the Java language coding standards presented in the *Java Language Specification*, from Sun Microsystems. Major contributions are from Peter King, Patrick Naughton, Mike DeMoney, Jonni Kanerva, Kathy Walrath, and Scott Hommel.
