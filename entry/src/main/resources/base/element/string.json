@@ -1,0 +1,44 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "SignalStrength"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "mainability_5g",
+      "value": "5G Signal Information"
+    },
+    {
+      "name": "mainability_lte",
+      "value": "LTE Signal Information"
+    },
+    {
+      "name": "mainability_wcdma",
+      "value": "WCDMA Signal Information"
+    },
+    {
+      "name": "mainability_gsm",
+      "value": "GSM Signal Information"
+    },
+    {
+      "name": "mainability_cdma",
+      "value": "CDMA Signal Information"
+    },
+    {
+      "name": "mainability_tdcdma",
+      "value": "TDCDMA Signal Information"
+    },
+    {
+      "name": "mainability_invalid",
+      "value": "Invalid network"
+    }
+  ]
+}

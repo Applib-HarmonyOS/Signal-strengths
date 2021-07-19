@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <ScrollView
+        ohos:height="match_parent"
+        ohos:width="match_parent">
+
+        <DependentLayout
+            ohos:height="match_parent"
+            ohos:width="match_parent">
+
+            <Text
+                ohos:id="$+id:nrname"
+                ohos:height="40fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:layout_alignment="left"
+                ohos:left_margin="20fp"
+                ohos:text="$string:mainability_5g"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:nrrsrp"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:nrname"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="RSRP"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:nrrsrq"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:nrrsrp"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="RSRQ"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:nrsinr"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:nrrsrq"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="SINR"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:nrsignallevel"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:nrsinr"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="Signal Level"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:ltename"
+                ohos:height="40fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:nrsignallevel"
+                ohos:layout_alignment="left"
+                ohos:left_margin="20fp"
+                ohos:text="$string:mainability_lte"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:ltersrp"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:ltename"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="RSRP"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:ltersrq"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:ltersrp"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="RSRQ"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:lterssnr"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:ltersrq"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="RSSNR"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:ltesignallevel"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:lterssnr"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="Signal Level"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:wcdmaname"
+                ohos:height="40fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:ltesignallevel"
+                ohos:layout_alignment="left"
+                ohos:left_margin="20fp"
+                ohos:text="$string:mainability_wcdma"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:wcdmarscp"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:wcdmaname"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="RCSP"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:wcdmaecno"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:wcdmarscp"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="ECNO"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:wcdmasignallevel"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:wcdmaecno"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="Signal Level"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:gsmname"
+                ohos:height="40fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:wcdmasignallevel"
+                ohos:layout_alignment="left"
+                ohos:left_margin="20fp"
+                ohos:text="$string:mainability_gsm"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:gsmrssi"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:gsmname"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="RSSI"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:gsmsignallevel"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:gsmrssi"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="Signal Level"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:cdmaname"
+                ohos:height="40fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:gsmsignallevel"
+                ohos:layout_alignment="left"
+                ohos:left_margin="20fp"
+                ohos:text="$string:mainability_cdma"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:cdmaRssi"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:cdmaname"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="RSSI"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:cdmaEcio"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:cdmaRssi"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="ECIO"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:evdoRssi"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:cdmaEcio"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="Signal Level"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:evdoSnr"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:cdmaEcio"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="Signal Level"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:cdmaSignalLevel"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:evdoSnr"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="Signal Level"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:tdcdmaname"
+                ohos:height="40fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:cdmaSignalLevel"
+                ohos:layout_alignment="left"
+                ohos:left_margin="20fp"
+                ohos:text="$string:mainability_tdcdma"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:tdscdmaRscp"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:tdcdmaname"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="Signal Level"
+                ohos:text_size="50px"/>
+
+            <Text
+                ohos:id="$+id:tdscdmaSignalLevel"
+                ohos:height="20fp"
+                ohos:width="match_parent"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:below="$id:tdscdmaRscp"
+                ohos:layout_alignment="left"
+                ohos:left_margin="40fp"
+                ohos:text="Signal Level"
+                ohos:text_size="50px"/>
+        </DependentLayout>
+    </ScrollView>
+</DirectionalLayout>
