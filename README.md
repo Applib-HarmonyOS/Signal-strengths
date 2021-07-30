@@ -1,6 +1,9 @@
+## SignalStrengths
 SignalStrengths is a library and sample application with the purpose of getting an accurate signal strength on phones.
+For testing and experimentation purposes, a sample app code can be downloaded [here](https://github.com/applibgroup/Signal-strengths).
 
-For testing and experimentation purposes, a sample apk can be downloaded [here](https://jfenn.me/projects/signalstrengths).
+## Source
+This library has been inspired by (https://github.com/fennifith/SignalStrengths) version 1.0, released on October 19, 2018.
 
 ## Usage
 
@@ -38,4 +41,22 @@ This allows you to specify exactly which method you want to obtain a value from.
 SignalStrength sValues = new SignalStrength(context)
 int signalLevel = sValues.getNrsignallevel(subId);
 int nrRSRP = sValues.getNrrsrp(subId);
+```
+## License
+```
+Copyright 2021 Applibgroup
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+See LICENSE.md
 ```
