@@ -77,7 +77,7 @@ public class MainAbilitySlice extends AbilitySlice {
         tvltersrp.setText("RSRP= " + sValues.getLtersrp(subId));
         tvltersrq.setText("RSRQ= " + sValues.getLtersrq(subId));
         tvlterssnr.setText("RSSNR= " + sValues.getLterssnr(subId));
-        tvltesignallevel.setText("Nr Signal Level=" + sValues.getLtesignallevel(subId));
+        tvltesignallevel.setText("LTE Signal Level=" + sValues.getLtesignallevel(subId));
         tvwcdmarscp.setText("RSCP= " + sValues.getWcdmarscp(subId));
         tvwcdmaecno.setText("ECNO= " + sValues.getWcdmaecno(subId));
         tvwcdmasignallevel.setText("Wcdma Signal Level=" + sValues.getWcdmasignallevel(subId));
@@ -112,12 +112,4 @@ public class MainAbilitySlice extends AbilitySlice {
             updateValues(lSlotId);
         }
     }
-    //Only for unit test purpose
-    public static class ContextProvider{
-        public static Context getTestContext(){
-             return null;
-        }
-
-    }
-
 }

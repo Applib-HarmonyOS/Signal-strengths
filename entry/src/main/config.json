@@ -1,15 +1,14 @@
 {
   "app": {
+    "apiVersion": {
+      "target": 5,
+      "compatible": 5
+    },
     "bundleName": "com.example.signalstrength",
-    "vendor": "example",
+    "vendor": "github",
     "version": {
       "code": 1000000,
       "name": "1.0.0"
-    },
-    "apiVersion": {
-      "compatible": 4,
-      "target": 5,
-      "releaseType": "Release"
     }
   },
   "deviceConfig": {},

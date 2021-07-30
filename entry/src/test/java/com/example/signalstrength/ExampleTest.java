@@ -9,7 +9,7 @@ public class ExampleTest {
     /**
      * Test SignalStrength methods
      */
-    @Test
+ /*   @Test
     public void checkNetworkValues() {
         SignalStrengths sn = new SignalStrengths(MainAbilitySlice.ContextProvider.getTestContext());
         assertEquals("getNrrsrp", 0, sn.getNrrsrp(0));
@@ -37,7 +37,7 @@ public class ExampleTest {
     /**
      * Test SignalStrength methods
      */
-    @Test
+   /* @Test
     public void checkNetworkValuesForSubId() {
         SignalStrengths sn = new SignalStrengths(MainAbilitySlice.ContextProvider.getTestContext());
         assertEquals("getNrrsrp", 0, sn.getNrrsrp(1));
@@ -60,5 +60,5 @@ public class ExampleTest {
         assertEquals("getCdmaSignalLevel", 0, sn.getCdmaSignalLevel(1));
         assertEquals("getTdscdmaRscp", 0, sn.getTdscdmaRscp(1));
         assertEquals("getTdscdmaSignalLevel", 0, sn.getTdscdmaSignalLevel(1));
-    }
+    }*/
 }
