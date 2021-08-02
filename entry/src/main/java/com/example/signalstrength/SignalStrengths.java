@@ -11,26 +11,26 @@ import ohos.utils.Parcel;
 import java.util.List;
 
 public class SignalStrengths {
-    private int mnrrsrp[] = new int[2],
-            mnrrsrq[] = new int[2],
-            mnrsinr[] = new int[2],
-            mnrsignallevel[] = new int[2],
-            mltersrp[] = new int[2],
-            mltersrq[] = new int[2],
-            mlterssnr[] = new int[2],
-            mltesignallevel[] = new int[2],
-            mwcdmarscp[] = new int[2],
-            mwcdmaecno[] = new int[2],
-            mwcdmasignallevel[] = new int[2],
-            mgsmrssi[] = new int[2],
-            mgsmsignallevel[] = new int[2],
-            mCdmaRssi[] = new int[2],
-            mCdmaEcio[] = new int[2],
-            mEvdoRssi[] = new int[2],
-            mEvdoSnr[] = new int[2],
-            mCdmaSignalLevel[] = new int[2],
-            mTdscdmaRscp[] = new int[2],
-            mTdscdmaSignalLevel[] = new int[2];
+    private int[] mnrrsrp = new int[2];
+    private int[] mnrrsrq = new int[2];
+    private int[] mnrsinr = new int[2];
+    private int[] mnrsignallevel = new int[2];
+    private int[] mltersrp = new int[2];
+    private int[] mltersrq = new int[2];
+    private int[] mlterssnr = new int[2];
+    private int[] mltesignallevel = new int[2];
+    private int[] mwcdmarscp = new int[2];
+    private int[] mwcdmaecno = new int[2];
+    private int[] mwcdmasignallevel = new int[2];
+    private int[] mgsmrssi = new int[2];
+    private int[] mgsmsignallevel = new int[2];
+    private int[] mCdmaRssi = new int[2];
+    private int[] mCdmaEcio = new int[2];
+    private int[] mEvdoRssi = new int[2];
+    private int[] mEvdoSnr = new int[2];
+    private int[] mCdmaSignalLevel = new int[2];
+    private int[] mTdscdmaRscp = new int[2];
+    private int[] mTdscdmaSignalLevel = new int[2];
     private Context mContext;
 
     /**

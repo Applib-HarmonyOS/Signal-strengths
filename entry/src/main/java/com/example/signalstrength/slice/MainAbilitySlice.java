@@ -12,21 +12,39 @@ import ohos.telephony.*;
 import java.util.List;
 
 public class MainAbilitySlice extends AbilitySlice {
-    private Text tvnrrsrp, tvnrrsrq, tvnrsinr, tvnrsignallevel, tvltersrp, tvltersrq, tvlterssnr, tvltesignallevel, tvwcdmarscp, tvwcdmaecno, tvwcdmasignallevel, tvgsmrssi, tvgsmsignallevel, tvCdmaRssi, tvCdmaEcio, tvEvdoRssi, tvEvdoSnr, tvCdmaSignalLevel, tvTdscdmaRscp, tvTdscdmaSignalLevel;
+    private Text tvnrrsrp;
+    private Text tvnrrsrq;
+    private Text tvnrsinr;
+    private Text tvnrsignallevel;
+    private Text tvltersrp;
+    private Text tvltersrq;
+    private Text tvlterssnr;
+    private Text tvltesignallevel;
+    private Text tvwcdmarscp;
+    private Text tvwcdmaecno;
+    private Text tvwcdmasignallevel;
+    private Text tvgsmrssi;
+    private Text tvgsmsignallevel;
+    private Text tvCdmaRssi;
+    private Text tvCdmaEcio;
+    private Text tvEvdoRssi;
+    private Text tvEvdoSnr;
+    private Text tvCdmaSignalLevel;
+    private Text tvTdscdmaRscp;
+    private Text tvTdscdmaSignalLevel;
     private SignalStrengths sValues;
     private int mask = RadioStateObserver.OBSERVE_MASK_SIGNAL_INFO | RadioStateObserver.OBSERVE_MASK_NETWORK_STATE;
     private LocalNetworkStateObserver radioStateObserver;
     private RadioInfoManager radioInfo;
-    private Context mContext;
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_main);
-        mContext = getApplicationContext();
+        Context context = getApplicationContext();
         //Here passing DEFAULT_SLOT_ID for testing purpose
         radioStateObserver = new LocalNetworkStateObserver(TelephonyConstants.DEFAULT_SLOT_ID);
-        radioInfo = RadioInfoManager.getInstance(mContext);
-        sValues = new SignalStrengths(mContext);
+        radioInfo = RadioInfoManager.getInstance(context);
+        sValues = new SignalStrengths(context);
         tvnrrsrp = (Text) findComponentById(ResourceTable.Id_nrrsrp);
         tvnrrsrq = (Text) findComponentById(ResourceTable.Id_nrrsrq);
         tvnrsinr = (Text) findComponentById(ResourceTable.Id_nrsinr);
