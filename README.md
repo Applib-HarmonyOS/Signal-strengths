@@ -1,9 +1,7 @@
-[![Build](https://github.com/applibgroup/Signal-strengths/actions/workflows/main.yml/badge.svg)](https://github.com/applibgroup/Signal-strengths/actions/workflows/main.yml)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=applibgroup_Signal-strengths&metric=alert_status)](https://sonarcloud.io/dashboard?id=applibgroup_Signal-strengths)
 # Signal-strengths
 SignalStrengths is a library and sample application with the purpose of getting an accurate signal strength on different HMOS phones.
 
-For testing and experimentation purposes, a sample apk can be downloaded [here](https://github.com/applibgroup/Signal-strengths).
+For testing and experimentation purposes, a sample apk can be downloaded [here](https://github.com/mayurlakhapure/Signal-strengths/tree/master/entry/src/main).
 
 # Source
 This library has been inspired by (https://github.com/fennifith/SignalStrengths) version 1.0, released on October 19, 2018.
@@ -20,6 +18,7 @@ compile 'james.signalstrengths:signalstrengths:0.0.4'
 ### Listening for Signal Changes
 
 To get your app to listen for a signal change, use RadioStateObserver class
+For example how to use RadioStateObserver please refer [here](https://github.com/mayurlakhapure/Signal-strengths/blob/master/entry/src/main/java/com/example/signalstrength/slice/MainAbilitySlice.java).
 ### Getting a Signal Value
 
 To obtain a signal value from a `SignalStrength` , simply pass subscription Id and Context to one of the methods in the `SignalStrengths` class, which will return a number from 0-4, or -1 if an error occurs. Some examples of this are below.
@@ -29,7 +28,7 @@ To obtain a signal value from a `SignalStrength` , simply pass subscription Id a
 This allows you to specify exactly which method you want to obtain a value from.
 
 ``` java
-double level = SignalStrengths.get(SignalStrengths.METHOD_LEVEL, subId, context);
+double level = SignalStrengths.get(SignalStrengths.METHOD_LTE_LEVEL, subId, context);
 ```
 
 #### First Valid Level
@@ -37,7 +36,7 @@ double level = SignalStrengths.get(SignalStrengths.METHOD_LEVEL, subId, context)
 This gets the first valid signal level available from any method in order of accuracy. This is the most recommended way of getting a signal value, as it is the most consistently accurate across different phones and versions. See Excluding Methods, and Custom Methods sections for for ways to change this method's behavior.
 
 ``` java
-double level = SignalStrengths.getFirstValid(signalStrength);
+double level = SignalStrengths.getFirstValid(subId,context);
 ```
 
 #### Average Level
