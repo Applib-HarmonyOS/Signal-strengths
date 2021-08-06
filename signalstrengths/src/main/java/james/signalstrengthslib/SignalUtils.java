@@ -2,6 +2,9 @@ package james.signalstrengthslib;
 
 public class SignalUtils {
 
+    private SignalUtils() {
+	    //Added to resolve sonarqube erros
+	}
     public static int getDbmLevel(int dbm) {
         if (dbm < -100) { return 0;}
         else if (dbm < -95) { return 1;}

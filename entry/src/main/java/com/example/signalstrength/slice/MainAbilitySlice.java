@@ -21,7 +21,8 @@
         private LocalNetworkStateObserver radioStateObserver;
         private RadioInfoManager radioInfo;
         private TableLayout tableLayout;
-        private Text firstValid, average;
+        private Text firstValid;
+        private Text average;
         private Context context;
         @Override
         public void onStart(Intent intent) {
@@ -50,11 +51,8 @@
         }
 
         private class LocalNetworkStateObserver extends RadioStateObserver {
-            private final int lSlotId;
-
             LocalNetworkStateObserver(int slotId) {
                 super(slotId);
-                lSlotId = slotId;
             }
 
             @Override
@@ -84,11 +82,7 @@
             firstValid.setText(String.valueOf(SignalStrengths.getFirstValid(TelephonyConstants.DEFAULT_SLOT_ID, context)));
             average.setText(String.valueOf(SignalStrengths.getAverage(TelephonyConstants.DEFAULT_SLOT_ID, context)));
             double level = 0;
-            try {
-                level = method.getLevel(TelephonyConstants.DEFAULT_SLOT_ID, context);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            level = method.getLevel(TelephonyConstants.DEFAULT_SLOT_ID, context);
             valueView.setText(String.valueOf(level));
         }
     }

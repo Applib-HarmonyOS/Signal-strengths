@@ -4,10 +4,10 @@ import ohos.app.Context;
 
 public abstract class SignalMethod {
 
-    public Boolean isExcluded;
+    protected Boolean isExcluded;
     private String name;
 
-    public SignalMethod(String name) {
+    protected SignalMethod(String name) {
         this.name = name;
     }
 
@@ -15,14 +15,14 @@ public abstract class SignalMethod {
         return name;
     }
 
-    public abstract double getLevel(int subId, Context c) throws Exception;
+    public abstract double getLevel(int subId, Context c);
 
-    public boolean isExcluded() {
+    public boolean isMethodExcluded() {
         return isExcluded != null && isExcluded;
     }
 
-    public void setExcluded(boolean isExcluded) {
-        this.isExcluded = isExcluded;
+    public void setExcluded(boolean setExcluded) {
+        this.isExcluded = setExcluded;
     }
 
 }

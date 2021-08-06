@@ -11,26 +11,26 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SignalStrengths {
-    public final static String METHOD_GSM_LEVEL = "getGsmLevel";
-    public final static String METHOD_GSM_DBM = "getGsmDbm";
-    public final static String METHOD_CDMA_LEVEL = "getCdmaLevel";
-    public final static String METHOD_TD_SCDMA_LEVEL = "getTdScdmaLevel";
-    public final static String METHOD_TD_SCDMA_DBM = "getTdScdmaDbm ";
-    public final static String METHOD_CDMA_DBM = "getCdmaDbm";
-    public final static String METHOD_CDMA_ECIO = "getCdmaEcio";
-    public final static String METHOD_EVDO_DBM = "getEvdoDbm";
-    public final static String METHOD_EVDO_SNR = "getEvdoSnr";
-    public final static String METHOD_LTE_LEVEL = "getLteLevel";
-    public final static String METHOD_LTE_RSRP = "getLteRsrp";
-    public final static String METHOD_LTE_RSRQ = "getLteRsrq";
-    public final static String METHOD_LTE_RSSNR = "getLteRssnr";
-    public final static String METHOD_WCDMA_DBM = "getWcdmaDbm";
-    public final static String METHOD_WCDMA_ECNO = "getWcdmaecno";
-    public final static String METHOD_WCDMA_LEVEL = "getWcdmasignallevel";
-    public final static String METHOD_NR_RSRP = "getNrRsrp";
-    public final static String METHOD_NR_RSRQ = "getNrRsrq";
-    public final static String METHOD_NR_SINR = "getNrSinr";
-    public final static String METHOD_NR_LEVEL = "getNrLevel";
+    public static final String METHOD_GSM_LEVEL = "getGsmLevel";
+    public static final String METHOD_GSM_DBM = "getGsmDbm";
+    public static final String METHOD_CDMA_LEVEL = "getCdmaLevel";
+    public static final String METHOD_TD_SCDMA_LEVEL = "getTdScdmaLevel";
+    public static final String METHOD_TD_SCDMA_DBM = "getTdScdmaDbm ";
+    public static final String METHOD_CDMA_DBM = "getCdmaDbm";
+    public static final String METHOD_CDMA_ECIO = "getCdmaEcio";
+    public static final String METHOD_EVDO_DBM = "getEvdoDbm";
+    public static final String METHOD_EVDO_SNR = "getEvdoSnr";
+    public static final String METHOD_LTE_LEVEL = "getLteLevel";
+    public static final String METHOD_LTE_RSRP = "getLteRsrp";
+    public static final String METHOD_LTE_RSRQ = "getLteRsrq";
+    public static final String METHOD_LTE_RSSNR = "getLteRssnr";
+    public static final String METHOD_WCDMA_DBM = "getWcdmaDbm";
+    public static final String METHOD_WCDMA_ECNO = "getWcdmaecno";
+    public static final String METHOD_WCDMA_LEVEL = "getWcdmasignallevel";
+    public static final String METHOD_NR_RSRP = "getNrRsrp";
+    public static final String METHOD_NR_RSRQ = "getNrRsrq";
+    public static final String METHOD_NR_SINR = "getNrSinr";
+    public static final String METHOD_NR_LEVEL = "getNrLevel";
 
     private static int[] mnrrsrp = new int[2];
     private static int[] mnrrsrq = new int[2];
@@ -53,10 +53,13 @@ public class SignalStrengths {
     private static int[] mTdscdmaRscp = new int[2];
     private static int[] mTdscdmaSignalLevel = new int[2];
 
+	private SignalStrengths(){
+    //Added to resolve sonarqube erros
+	}
     private static final List<SignalMethod> methods = new ArrayList<>(Arrays.asList(
             new SignalMethod(METHOD_GSM_LEVEL) {
                 @Override
-                public double getLevel(int subId, Context c) throws Exception {
+                public double getLevel(int subId, Context c) {
 					getAllSignalValues(subId,c);
                     return mgsmsignallevel[subId];
                 }
@@ -70,32 +73,32 @@ public class SignalStrengths {
             },
             new SignalMethod(METHOD_CDMA_LEVEL) {
                 @Override
-                public double getLevel(int subId, Context c) throws Exception {
+                public double getLevel(int subId, Context c) {
 					getAllSignalValues(subId,c);
                     return mCdmaSignalLevel[subId];
                 }
             },
             new SignalMethod(METHOD_TD_SCDMA_LEVEL) {
                 @Override
-                public double getLevel(int subId, Context c) throws Exception {
+                public double getLevel(int subId, Context c) {
 					getAllSignalValues(subId,c);
                     return mTdscdmaSignalLevel[subId];
                 }
 
                 @Override
-                public boolean isExcluded() {
+                public boolean isMethodExcluded() {
                     return isExcluded == null || isExcluded;
                 }
             },
             new SignalMethod(METHOD_TD_SCDMA_DBM) {
                 @Override
-                public double getLevel(int subId, Context c) throws Exception {
+                public double getLevel(int subId, Context c) {
                     getAllSignalValues(subId,c);
                     return SignalUtils.getDbmLevel(mTdscdmaRscp[subId]);
                 }
 
                 @Override
-                public boolean isExcluded() {
+                public boolean isMethodExcluded() {
                     return isExcluded == null || isExcluded;
                 }
             },
@@ -128,55 +131,55 @@ public class SignalStrengths {
                 }
 
                 @Override
-                public boolean isExcluded() {
+                public boolean isMethodExcluded() {
                     return isExcluded == null || isExcluded;
                 }
             },
             new SignalMethod(METHOD_LTE_LEVEL) {
                 @Override
-                public double getLevel(int subId, Context c) throws Exception {
+                public double getLevel(int subId, Context c) {
 					getAllSignalValues(subId,c);
                     return mltesignallevel[subId];
                 }
 
                 @Override
-                public boolean isExcluded() {
+                public boolean isMethodExcluded() {
                     return isExcluded == null || isExcluded;
                 }
             },
             new SignalMethod(METHOD_LTE_RSRP) {
                 @Override
-                public double getLevel(int subId, Context c) throws Exception {
+                public double getLevel(int subId, Context c) {
 					getAllSignalValues(subId,c);
                     return SignalUtils.getRsrpLevel(mltersrp[subId]);
                 }
 
                 @Override
-                public boolean isExcluded() {
+                public boolean isMethodExcluded() {
                     return isExcluded == null || isExcluded;
                 }
             },
             new SignalMethod(METHOD_LTE_RSRQ) {
                 @Override
-                public double getLevel(int subId, Context c) throws Exception {
+                public double getLevel(int subId, Context c) {
 					getAllSignalValues(subId,c);
                     return SignalUtils.getRsrqLevel(mltersrq[subId]);
                 }
 
                 @Override
-                public boolean isExcluded() {
+                public boolean isMethodExcluded() {
                     return isExcluded == null || isExcluded;
                 }
             },
             new SignalMethod(METHOD_LTE_RSSNR) {
                 @Override
-                public double getLevel(int subId, Context c) throws Exception {
+                public double getLevel(int subId, Context c) {
 					getAllSignalValues(subId,c);
                     return SignalUtils.getSnrLevel(mlterssnr[subId]);
                 }
 
                 @Override
-                public boolean isExcluded() {
+                public boolean isMethodExcluded() {
                     return isExcluded == null || isExcluded;
                 }
             },
@@ -230,7 +233,7 @@ public class SignalStrengths {
                 }
 
                 @Override
-                public boolean isExcluded() {
+                public boolean isMethodExcluded() {
                     return isExcluded == null || isExcluded;
                 }
             }
@@ -243,12 +246,7 @@ public class SignalStrengths {
     public static double get(String methodName, int subId, Context c) {
         for (SignalMethod method : methods) {
             if (methodName.equals(method.getName()))
-                try {
                     return method.getLevel(subId,c);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    break;
-                }
         }
 
         return 0;
@@ -256,15 +254,10 @@ public class SignalStrengths {
 
     public static double getFirstValid(int subId, Context c) {
         for (SignalMethod method : methods) {
-            if (method.isExcluded()) continue;
+            if (method.isMethodExcluded()) continue;
 
             double level;
-            try {
-                level = method.getLevel(subId,c);
-            } catch (Exception e) {
-                continue;
-            }
-
+            level = method.getLevel(subId,c);
             if (SignalUtils.isValidLevel(level) && level > 0)
                 return level;
         }
@@ -276,15 +269,9 @@ public class SignalStrengths {
         List<Double> values = new ArrayList<>();
 
         for (SignalMethod method : methods) {
-            if (method.isExcluded()) continue;
-
+            if (method.isMethodExcluded()) continue;
             double level;
-            try {
-                level = method.getLevel(subId,c);
-            } catch (Exception e) {
-                continue;
-            }
-
+            level = method.getLevel(subId,c);
             if (SignalUtils.isValidLevel(level) && level > 0)
                 values.add(level);
         }
@@ -294,7 +281,7 @@ public class SignalStrengths {
             level += value;
         }
 
-        return values.size() > 0 ? level / values.size() : level;
+        return values.isEmpty() ? level:level / values.size();
     }
 
     /**

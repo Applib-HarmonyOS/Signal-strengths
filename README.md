@@ -7,6 +7,7 @@ For testing and experimentation purposes, a sample apk can be downloaded [here](
 
 # Source
 This library has been inspired by (https://github.com/fennifith/SignalStrengths) version 1.0, released on October 19, 2018.
+
 ## Dependency
 The Gradle dependency is available through jCenter, which is used by default in Deveco Studio. To add the module to your project, copy this line into the dependencies section of your build.gradle file.
 ``` gradle
@@ -67,7 +68,8 @@ SignalStrengths.getMethods().add(new SignalMethod("Method Id") {
   }
 });
 ```
-##License
+
+## License
 
 
    Copyright 2016 James Fenn
