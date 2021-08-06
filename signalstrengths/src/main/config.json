@@ -1,0 +1,27 @@
+{
+  "app": {
+    "apiVersion": {
+      "target": 5,
+      "compatible": 5
+    },
+    "bundleName": "james.signalstrengthslib",
+    "vendor": "github",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {
+  },
+  "module": {
+    "package": "james.signalstrengthslib",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "signalstrengths",
+      "moduleType": "har"
+    }
+  }
+}

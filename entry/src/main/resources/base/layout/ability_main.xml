@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <ScrollView
+        ohos:height="match_parent"
+        ohos:width="match_parent">
+
+    <DirectionalLayout
+        ohos:width="match_parent"
+        ohos:height="match_content"
+        ohos:top_padding="12dip"
+        ohos:bottom_padding="12dip"
+        ohos:orientation="vertical">
+
+        <DirectionalLayout
+            ohos:width="match_parent"
+            ohos:height="match_content"
+            ohos:margin="20dip"
+            ohos:orientation="horizontal">
+
+            <DirectionalLayout
+                ohos:width="0dip"
+                ohos:height="match_content"
+                ohos:weight="1"
+                ohos:alignment="horizontal_center"
+                ohos:orientation="vertical">
+
+                <Text
+                    ohos:id="$+id:firstValid"
+                    ohos:width="match_content"
+                    ohos:height="match_content"
+                    ohos:margin="4dip"
+                    ohos:text="0"
+                    ohos:text_color="$ohos:color:id_color_text_hint_dark"
+                    ohos:text_size="26fp" />
+
+                <Text
+                    ohos:width="match_content"
+                    ohos:height="match_content"
+                    ohos:left_margin="50dip"
+                    ohos:text="First Valid"
+                    ohos:text_size="14fp" />
+
+            </DirectionalLayout>
+
+            <DirectionalLayout
+                ohos:width="0dip"
+                ohos:height="match_content"
+                ohos:weight="1"
+                ohos:alignment="horizontal_center"
+                ohos:orientation="vertical">
+
+                <Text
+                    ohos:id="$+id:average"
+                    ohos:width="match_content"
+                    ohos:height="match_content"
+                    ohos:margin="4dip"
+                    ohos:text="0"
+                    ohos:text_color="$ohos:color:id_color_text_hint_dark"
+                    ohos:text_size="26fp" />
+
+                <Text
+                    ohos:width="match_content"
+                    ohos:height="match_content"
+                    ohos:text="Average"
+                    ohos:text_size="14fp" />
+
+            </DirectionalLayout>
+
+        </DirectionalLayout>
+
+        <TableLayout
+            ohos:id="$+id:gridLayout"
+            ohos:width="match_content"
+            ohos:height="match_content"
+            ohos:margin="8dip"
+            ohos:column_count="2" />
+
+    </DirectionalLayout>
+
+</ScrollView>
+</DirectionalLayout>
