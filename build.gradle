@@ -45,6 +45,7 @@ allprojects {
        configFile file("config/checkstyle.xml")
   
        source 'entry/src/main/java'
+       source 'signalstrengths/src/main/java'
        include '**/*.java'
   
        // empty classpath
@@ -61,7 +62,7 @@ sonarqube {
         property "sonar.projectKey", "applibgroup_Signal-strengths"
         property "sonar.organization", "applibgroup"
         property "sonar.host.url", "https://sonarcloud.io"
-        property "sonar.sources", "entry"
-        property "sonar.java.binaries", "entry/build"
+        property "sonar.sources", "entry,signalstrengths"
+        property "sonar.java.binaries", "entry/build,signalstrengths/build"
     }
 }
