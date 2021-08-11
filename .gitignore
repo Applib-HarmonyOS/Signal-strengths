@@ -1,9 +1,9 @@
 *.iml
 .gradle
 /local.properties
+/.idea/
 /.idea/caches
 /.idea/libraries
-/.idea/previewer/previewConfig.json
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
@@ -14,10 +14,3 @@
 .externalNativeBuild
 /entry/.preview
 .cxx
-
-.idea/sonarlint
-.idea/checkstyle-idea.xml
-.idea/checkstyle*
-.idea/code-check
-.idea/previewer
-.idea/

@@ -3,10 +3,14 @@
 # Signal-strengths
 SignalStrengths is a library and sample application with the purpose of getting an accurate signal strength on different HMOS phones.
 
-For testing and experimentation purposes, a sample apk can be downloaded from the cdoe
+For testing and experimentation purposes, a sample apk can be downloaded from this cdoe
 ## Source
 This library has been inspired by (https://github.com/fennifith/SignalStrengths) version 1.0, released on October 19, 2018.
 
+## Features
+
+Signal-strengths library helps to get signal level of the avaliable networks from the device
+![SignalStrength](images/2G_level.PNG)
 ## Dependency
 1. For using Signal-strengths module in your application, include the source code and add the below dependencies in entry/build.gradle to generate hap/support.har
 ```
@@ -34,7 +38,8 @@ TO BE UPDATED
 ### Listening for Signal Changes
 
 To get your app to listen for a signal change, use RadioStateObserver class
-For example how to use RadioStateObserver please refer sample app
+For example how to use RadioStateObserver please refer sample app 
+
 ### Getting a Signal Value
 
 To obtain a signal value from a `SignalStrength` , simply pass subscription Id and Context to one of the methods in the `SignalStrengths` class, which will return a number from 0-4, or -1 if an error occurs. Some examples of this are below.
