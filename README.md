@@ -1,16 +1,32 @@
+[![Build](https://github.com/applibgroup/Signal-strengths/actions/workflows/main.yml/badge.svg)](https://github.com/applibgroup/Signal-strengths/actions/workflows/main.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=applibgroup_Signal-strengths&metric=alert_status)](https://sonarcloud.io/dashboard?id=applibgroup_Signal-strengths)
 # Signal-strengths
 SignalStrengths is a library and sample application with the purpose of getting an accurate signal strength on different HMOS phones.
 
-For testing and experimentation purposes, a sample apk can be downloaded [here](https://github.com/mayurlakhapure/Signal-strengths/tree/master/entry/src/main).
-
-# Source
+For testing and experimentation purposes, a sample apk can be downloaded from this cdoe
+## Source
 This library has been inspired by (https://github.com/fennifith/SignalStrengths) version 1.0, released on October 19, 2018.
 
 ## Dependency
-The Gradle dependency is available through jCenter, which is used by default in Deveco Studio. To add the module to your project, copy this line into the dependencies section of your build.gradle file.
-``` gradle
-compile 'james.signalstrengths:signalstrengths:0.0.4'
+1. For using Signal-strengths module in your application, include the source code and add the below dependencies in entry/build.gradle to generate hap/support.har
 ```
+ implementation project(path: ':signalstrengths')
+ testImplementation 'junit:junit:4.13'
+```
+
+2. For using Signal-strengths module in your application using the har file, add the har file in the entry/libs folder and add the dependencies in entry/build.gradle file
+
+```
+ implementation fileTree(dir: 'libs', include: ['*.har'])
+ testImplementation 'junit:junit:4.13'
+```
+
+3. For using Signal-strengths module from a remote repository in your application, add the below dependencies in entry/build.gradle file.
+
+```
+TO BE UPDATED
+```
+
 ## Usage
 
 ### Setup
@@ -68,20 +84,4 @@ SignalStrengths.getMethods().add(new SignalMethod("Method Id") {
 });
 ```
 
-## License
-
-
-   Copyright 2016 James Fenn
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
 ```
